@@ -1,0 +1,31 @@
+.sponsor-card {
+    @include flexbox(null, null, column, null);
+    gap: $content-gap;
+    background-color: var(--accent-100);
+    padding: 1rem;
+    border-radius: .5rem;
+    width: fit-content;
+
+
+    .sponsor-title {
+        @include typography( headings, h4, 500, var(--accent-400) );
+        margin-bottom: 1rem;
+    }
+
+    .sponsors {
+        @include flexbox(space-between, null, row, null);
+        gap: $content-gap;
+
+        .sponsor {
+            img {
+                height: 25px;
+                width: 100%;
+                opacity: 50%;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: var(--neutral-300);
+    }
+}

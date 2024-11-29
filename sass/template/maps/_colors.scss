@@ -1,0 +1,110 @@
+$colors: (
+    primary: (
+        100: hsl(204, 34%, 95%), // Lightest
+        200: hsl(204, 34%, 85%), // Lighter
+        300: hsl(204, 34%, 75%), // Light
+        400: hsl(204, 34%, 67%), // Default (Blue Gray #90ADC6)
+        500: hsl(204, 34%, 57%), // Dark
+        600: hsl(204, 34%, 47%)  // Darkest
+    ),
+    secondary: (
+        100: hsl(220, 5%, 96%),  // Lightest
+        200: hsl(220, 5%, 92%),  // Lighter
+        300: hsl(220, 5%, 88%),  // Light
+        400: hsl(220, 5%, 84%),  // Default (Pewter #E9EAEC)
+        500: hsl(220, 5%, 82%),  // Dark
+        600: hsl(220, 5%, 78%)   // Darkest
+    ),
+    tertiary: (
+        100: hsl(49, 95%, 85%),  // Lightest
+        200: hsl(49, 95%, 75%),  // Lighter
+        300: hsl(49, 95%, 65%),  // Light
+        400: hsl(49, 95%, 59%),  // Default (Yellow #FAD02C)
+        500: hsl(49, 95%, 50%),  // Dark
+        600: hsl(49, 95%, 40%)   // Darkest
+    ),
+    accent: (
+        100: hsl(232, 18%, 82%), // Lightest
+        200: hsl(232, 18%, 64%), // Lighter
+        300: hsl(232, 18%, 47%), // Light
+        400: hsl(232, 18%, 30%), // Default (Dark Blue #333652)
+        500: hsl(232, 18%, 20%), // Dark
+        600: hsl(232, 18%, 10%)  // Darkest
+    ),
+    success: (
+        100: hsl(145, 63%, 85%), // Lightest
+        200: hsl(145, 63%, 75%), // Lighter
+        300: hsl(145, 63%, 65%), // Light
+        400: hsl(145, 63%, 55%), // Default
+        500: hsl(145, 63%, 45%), // Dark
+        600: hsl(145, 63%, 35%)  // Darkest
+    ),
+    warning: (
+        100: hsl(45, 100%, 95%), // Lightest
+        200: hsl(45, 100%, 85%), // Lighter
+        300: hsl(45, 100%, 75%), // Light
+        400: hsl(45, 100%, 65%), // Default
+        500: hsl(45, 100%, 55%), // Dark
+        600: hsl(45, 100%, 45%)  // Darkest
+    ),
+    error: (
+        100: hsl(0, 75%, 95%),   // Lightest
+        200: hsl(0, 75%, 85%),   // Lighter
+        300: hsl(0, 75%, 75%),   // Light
+        400: hsl(0, 75%, 65%),   // Default
+        500: hsl(0, 75%, 55%),   // Dark
+        600: hsl(0, 75%, 45%)    // Darkest
+    ),
+    neutral: (
+        100: hsl(0, 0%, 100%),   // Lightest
+        200: hsl(0, 0%, 95%),    // Lighter
+        300: hsl(0, 0%, 90%),    // Light
+        400: hsl(0, 0%, 80%),    // Default
+        500: hsl(0, 0%, 70%),    // Dark
+        600: hsl(0, 0%, 60%),    // Darker
+        700: hsl(0, 0%, 50%),    // Darker
+        800: hsl(0, 0%, 40%),    // Darker
+        900: hsl(0, 0%, 30%)     // Darkest
+    )
+);
+
+:root {
+    @each $color, $shade in $colors {
+        @each $shade, $value in $shade {
+            --#{ $color }-#{ $shade }: #{ $value };
+        }
+    }
+
+    @each $screen-size, $font-size in $type-scale {
+        @if $screen-size == 'phone' {
+            @each $size, $value in $font-size {
+                --fs-#{ $size }: #{ $value };
+            }
+        } @else {
+            @include media( phone ) {
+                @each $size, $value in $font-size {
+                    --fs-#{ $size }: #{ $value };
+                }
+            }
+        }
+    }
+}
+
+@each $color, $shade in $colors {
+    @each $shade, $value in $shade {
+        .text-#{ $color }-#{ $shade } {
+            color: var( --#{ $color }-#{ $shade } )
+        }
+        .bg-#{ $color }-#{ $shade } {
+            background-color: var( --#{ $color }-#{ $shade } )
+        }
+
+        .btn-#{ $color }-#{ $shade } {
+            background-color: var( --#{ $color }-#{ $shade } );
+        }
+
+        .border-#{ $color }-#{ $shade } {
+            border-color: var( --#{ $color }-#{ $shade } );
+        }
+    }
+}

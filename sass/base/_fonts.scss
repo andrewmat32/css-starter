@@ -1,0 +1,133 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Open Sans
+// -----------------------------------------------------------------------------
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSans-Light'), url('/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSans-Regular'), url('/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSans-Medium'), url('/fonts/OpenSans/OpenSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSans-SemiBold'), url('/fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSans-Bold'), url('/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans Semi Condensed';
+    src: local('OpenSans_SemiCondensed-SemiBold'), url('/fonts/OpenSans/OpenSans_SemiCondensed-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+// -----------------------------------------------------------------------------
+// Inter
+// -----------------------------------------------------------------------------
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-Thin'), url('/fonts/Inter/Inter-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-ExtraLight'), url('/fonts/Inter/Inter-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-Light'), url('/fonts/Inter/Inter-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-Regular'), url('/fonts/Inter/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-Medium'), url('/fonts/Inter/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-SemiBold'), url('/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-Bold'), url('/fonts/Inter/Inter-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-ExtraBold'), url('/fonts/Inter/Inter-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter-Black'), url('/fonts/Inter/Inter-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

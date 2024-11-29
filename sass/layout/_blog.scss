@@ -1,0 +1,217 @@
+.blog-listing {
+    .blog-container {
+        @include container;
+
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+
+        }
+
+        .blog-heading {
+            @include flexbox(center, center, column, null);
+            gap: $content-gap;
+
+            .title {
+                @include typography( headings, h2, 600, var(--accent-500) );
+                margin-bottom: 1rem;
+            }
+
+            .sub-title {
+                @include typography(content, medium, 500, var(--neutral-700));
+                margin-bottom: 1rem;
+            }
+        }
+
+        .blog-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: $content-gap;
+
+            @media screen and (max-width: map-get($media-queries, tablet-min)) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+
+.blog-detail {
+    .blog-detail-container {
+        @include container;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: $content-gap;
+
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+            grid-template-columns: 1fr;
+        }
+
+        .blog-content {
+            @include flexbox(unset, unset, column, null);
+            gap: $content-gap;
+
+            .title {
+                @include typography( headings, h1, 700, var(--accent-500) );
+                margin-bottom: $content-gap;
+            }
+
+            .blog-detail-heading {
+                @include flexbox(space-between, center, null, null);
+                //background-color: var(--neutral-100);
+                padding: .5rem 1rem .5rem .5rem;
+                border-bottom: 1px solid var(--neutral-500);
+                //opacity: .7;
+
+                @media screen and (max-width: map-get($media-queries, desktop-min)) {
+                    @include flexbox(flex-start, flex-start, column, null);
+                    padding: 0;
+                }
+
+                .blog-detail-timestamp {
+                    @include typography( content, small, 400, var(--accent-500) );
+                    @include flexbox(center, right, column, null);
+                    padding: .5rem 1rem;
+                    gap: .5rem;
+
+                    @media screen and (max-width: map-get($media-queries, desktop-min)) {
+                        @include flexbox(space-between, center, row, null);
+                        width: 100%;
+                        padding: 1rem 0;
+                    }
+                }
+            }
+
+            .blog-comments {
+                @include flexbox(null, null, column, null);
+                gap: $content-gap;
+
+                .comment {
+                    background-color: var(--neutral-100);
+                    padding: 1rem;
+                    border-radius: 1rem;
+                }
+
+                .comment-replies {
+                    padding-left: 4rem;
+                }
+
+                .comment-extra {
+                    @include flexbox(space-between, center, row, null);
+                    gap: $content-gap;
+                    padding: .5rem 0;
+
+                    .comment-actions {
+                        @include flexbox(null, center, row, null);
+                        gap: $content-gap;
+
+                        a {
+                            color: var(--accent-500);
+                        }
+                    }
+
+                }
+
+                .blog-comments-title,
+                .blog-comments-replies-title {
+                    .title {
+                        @include typography( headings, h3, 600, var(--accent-500) );
+                        margin-bottom: 0;
+                    }
+
+                    .comment-input {
+                        @include flexbox(null, null, column, null);
+                        gap: $content-gap;
+                        background-color: var(--neutral-100);
+                        padding: 1rem;
+                        border-radius: 1rem;
+
+                        textarea {
+                            resize: vertical;
+                            border: none
+                            //padding: 1rem;
+                            //border-radius: 1rem;
+                            //border: 1px solid var(--neutral-500);
+                        }
+
+                        textarea:focus {
+                            outline: none;
+                        }
+
+                        button {
+                            width: fit-content;
+                        }
+                    }
+                }
+
+                .comment {
+                    @include flexbox(null, null, column, null);
+                    gap: $content-gap;
+
+                    .comment-timestamp {
+                        @include typography( content, small, 400, var(--accent-500) );
+                    }
+
+                    .comment-content {
+                        @include typography( content, small, 400, var(--neutral-700) );
+                    }
+
+                    .comment-replies {
+                        @include flexbox(null, null, column, null);
+                        gap: $content-gap;
+                        padding-left: 1rem;
+                        margin-left: 2rem;
+                        border-left: 1px solid var(--neutral-500);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-detail-container {
+    .blog-similar {
+        @include flexbox(center, center, column, null);
+        gap: $content-gap;
+
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+            display: none;
+        }
+    }
+}
+
+.blog-similar {
+    .blog-similar-container {
+
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+            @include container;
+            @include flexbox(center, center, column, null);
+            gap: $content-gap;
+        }
+
+        @media screen and (min-width: map-get($media-queries, desktop-min)) {
+            @include flexbox(center, center, row, null);
+            gap: $content-gap;
+            overflow: hidden;
+
+            .blog-card {
+                @include flexbox( null, null, row, null);
+
+                .blog-image {
+                    width: 400px;
+                    object-fit: cover;
+                    height: 228px;
+
+                    img {
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 8px;
+                    }
+                }
+
+                .blog-content {
+                    border-top-right-radius: 8px;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+    }
+}

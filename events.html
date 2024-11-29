@@ -1,0 +1,663 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!--        include font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/style.purged.css">
+    <title>CSS Starter</title>
+</head>
+<body>
+
+<!--    HERO      -->
+<section class="hero">
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="images/smooth-logo.png" alt="Smooth Logo"><span class="logo-title"> Smooth</span></a>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-menu__list">
+                    <div class="nav-menu__item">
+                        <a href="/">Home</a>
+                    </div>
+                    <div class="nav-menu__item">
+                        <div class="nav-menu__dropdown-title">Templates <i class="fa fa-caret-down"></i></div>
+                        <div class="nav-menu__dropdown">
+                            <a href="/calltoaction.html">Call to action <i class="fa fa-arrow-right"></i></a>
+                            <a href="/products.html">Products <i class="fa fa-arrow-right"></i></a>
+                            <a href="/categories.html">Categories <i class="fa fa-arrow-right"></i></a>
+                            <a href="/events.html">Events <i class="fa fa-arrow-right"></i></a>
+                            <a href="/blogs.html">Blogs <i class="fa fa-arrow-right"></i></a>
+                            <a href="/typography.html">Typography <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a href="/classes.html">Classes</a>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a href="/demo.html">DEMO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="btn">Sign Up</button>
+                <button class="btn btn-accent-300 text-neutral-200">Get Started</button>
+            </div>
+            <input id='add-item-dropdown' type='checkbox'>
+            <label for="add-item-dropdown" class="burger-menu">
+                <div class="burger-menu-bar"></div>
+                <div class="burger-menu-bar"></div>
+                <div class="burger-menu-bar"></div>
+            </label>
+            <div class="nav-menu__list nav-menu__mobile">
+                <div class="nav-menu__item">
+                    <a href="/">Home</a>
+                </div>
+                <div class="nav-menu__item">
+                    <input id='nav-mobile_dropdown' type='checkbox'>
+                    <label for="nav-mobile_dropdown" class="nav-menu__dropdown-title">Templates <i
+                            class="fa fa-caret-down"></i></label>
+                    <div class="nav-menu__dropdown nav-mobile_dropdown">
+                        <a href="/calltoaction.html">Call to action <i class="fa fa-arrow-right"></i></a>
+                        <a href="/products.html">Products <i class="fa fa-arrow-right"></i></a>
+                        <a href="/categories.html">Categories <i class="fa fa-arrow-right"></i></a>
+                        <a href="/events.html">Events <i class="fa fa-arrow-right"></i></a>
+                        <a href="/blogs.html">Blogs <i class="fa fa-arrow-right"></i></a>
+                        <a href="/typography.html">Typography <i class="fa fa-arrow-right"></i></a>
+
+                    </div>
+                </div>
+                <div class="nav-menu__item">
+                    <a href="/classes.html">Classes</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="hero-container hero-small">
+        <div class="hero-content">
+            <h1 class="title">Events</h1>
+            <p class="sub-title">Showcasing the best events organized by our partners</p>
+        </div>
+    </div>
+</section>
+
+<!--    PARTNERS      -->
+<section class="quarter-section partners">
+    <div class="partners-container">
+        <div class="partner"><img class="text-neutral-200" src="images/partner1.svg" alt=""></div>
+        <div class="partner"><img src="images/partner2.svg" alt=""></div>
+        <div class="partner"><img src="images/partner3.svg" alt=""></div>
+        <div class="partner"><img src="images/partner4.svg" alt=""></div>
+        <div class="partner"><img src="images/partner5.svg" alt=""></div>
+        <div class="partner"><img src="images/partner6.svg" alt=""></div>
+    </div>
+</section>
+
+<!--    EVENTS      -->
+<section class="dynamic-section events-2-column">
+    <div class="events-container">
+        <div class="events-heading">
+            <div class="title">Monday</div>
+            <div class="sub-title">August 13, 2024</div>
+            <div class="time-zone"><i class="fa fa-clock"></i> Central Standard Time (GMT+2)</div>
+        </div>
+        <div class="events">
+            <div class="timeline-left">
+                <div class="heading">Morning</div>
+                <div class="event">
+                    <div class="event-time">07:00 - 08:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Breakfast</div>
+                        <div class="event-description">Start your day with a nourishing and balanced breakfast, packed
+                            with essential nutrients to fuel your body and mind for a productive day ahead.
+                        </div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">John Doe</div>
+                                <div class="author-title">CEO & Co Founder of Smooth</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">08:00 - 09:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Morning Yoga</div>
+                        <div class="event-description">Refresh your mind and body with yoga</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Jane Smith</div>
+                                <div class="author-title">Certified Yoga Instructor</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">09:00 - 10:00</div>
+                    <div class="event-content">
+                        <div class="sponsor-card">
+                            <span class="sponsor-title">Keynote speech</span>
+                            <div class="sub-title">Sponsors:</div>
+                            <div class="sponsors">
+                                <div class="sponsor"><img src="images/partner3.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner5.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner4.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner7.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">10:00 - 11:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Networking Session</div>
+                        <div class="event-description">Connect with industry professionals</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Brown</div>
+                                <div class="author-title">Networking Expert</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">11:00 - 12:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Workshop: Digital Marketing</div>
+                        <div class="event-description">Learn the latest strategies in digital marketing</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Emily White</div>
+                                <div class="author-title">Marketing Director at AdCo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">12:00 - 13:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Lunch Break</div>
+                        <div class="event-description">Enjoy a delicious and healthy lunch</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Catering Team</div>
+                                <div class="author-title">Top Chefs of the Event</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-right">
+                <div class="heading">Afternoon</div>
+                <div class="event">
+                    <div class="event-time">13:00 - 14:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Panel Discussion</div>
+                        <div class="event-description">Insights from industry experts on emerging trends</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Various Experts</div>
+                                <div class="author-title">Leaders in Tech, Marketing, and Business</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">14:00 - 15:00</div>
+                    <div class="event-content">
+                        <div class="sponsor-card">
+                            <span class="sponsor-title">Breakout Sessions</span>
+                            <div class="sub-title">Sponsors:</div>
+                            <div class="sponsors">
+                                <div class="sponsor"><img src="images/partner6.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner7.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner8.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner9.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">15:00 - 16:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Product Demos</div>
+                        <div class="event-description">See the latest products in action</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Product Team</div>
+                                <div class="author-title">Innovators at Work</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">16:00 - 17:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Afternoon Tea</div>
+                        <div class="event-description">Relax with a cup of tea and snacks</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Catering Team</div>
+                                <div class="author-title">Top Chefs of the Event</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">17:00 - 18:00</div>
+                    <div class="event-content">
+                        <div class="event-title">Closing Remarks</div>
+                        <div class="event-description">Summary and closing words from the host</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Event Host</div>
+                                <div class="author-title">Organizer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-time">18:00 - 19:00</div>
+                    <div class="event-content">
+                        <div class="sponsor-card">
+                            <span class="sponsor-title">Evening Reception</span>
+                            <div class="sub-title">Sponsors:</div>
+                            <div class="sponsors">
+                                <div class="sponsor"><img src="images/partner1.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner6.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner9.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner2.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dynamic-section events">
+    <div class="events-container">
+        <div class="events-heading">
+            <div class="title">Schedule</div>
+            <div class="sub-title">This is the schedule for the event</div>
+            <div class="link"><a href="#">View Full Schedule </a>
+                <li class="fa fa-chevron-circle-right"></li>
+            </div>
+        </div>
+        <div class="events">
+            <div class="event">
+                <div class="event-time">07:00 - 08:00</div>
+                <div class="event-name">Breakfast</div>
+            </div>
+            <div class="event">
+                <div class="event-time">08:00 - 09:00</div>
+                <div class="event-name">Morning Yoga</div>
+            </div>
+            <div class="event">
+                <div class="event-time">09:00 - 10:00</div>
+                <div class="event-name">Keynote speech</div>
+            </div>
+            <div class="event">
+                <div class="event-time">10:00 - 11:00</div>
+                <div class="event-name">Networking Session</div>
+            </div>
+            <div class="event">
+                <div class="event-time">11:00 - 12:00</div>
+                <div class="event-name">Workshop: Digital Marketing</div>
+            </div>
+            <div class="event">
+                <div class="event-time">12:00 - 13:00</div>
+                <div class="event-name">Lunch Break</div>
+            </div>
+            <div class="event">
+                <div class="event-time">13:00 - 14:00</div>
+                <div class="event-name">Panel Discussion</div>
+            </div>
+            <div class="event">
+                <div class="event-time">14:00 - 15:00</div>
+                <div class="event-name">Breakout Sessions</div>
+            </div>
+            <div class="event">
+                <div class="event-time">15:00 - 16:00</div>
+                <div class="event-name">Product Demos</div>
+            </div>
+            <div class="event">
+                <div class="event-time">16:00 - 17:00</div>
+                <div class="event-name">Afternoon Tea</div>
+            </div>
+            <div class="event">
+                <div class="event-time">17:00 - 18:00</div>
+                <div class="event-name">Closing Remarks</div>
+            </div>
+            <div class="event">
+                <div class="event-time">18:00 - 19:00</div>
+                <div class="event-name">Evening Reception</div>
+            </div>
+        </div>
+</section>
+<section class="dynamic-section events-tabs">
+    <div class="events-container">
+        <div class="events-heading">
+            <div class="title">Schedule</div>
+            <div class="sub-title">This is the schedule for the event</div>
+        </div>
+        <div class="tabs">
+            <input type="radio" id="tab1" name="tab-group" checked>
+            <label for="tab1"><span class="bold-text">Day 1:</span> Wednesday, Oct 12th</label>
+
+            <input type="radio" id="tab2" name="tab-group">
+            <label for="tab2"><span class="bold-text">Day 2:</span> Thursday, Oct 13th</label>
+
+            <input type="radio" id="tab3" name="tab-group">
+            <label for="tab3"><span class="bold-text">Day 3:</span> Friday, Oct 14th</label>
+
+            <input type="radio" id="tab4" name="tab-group">
+            <label for="tab4"><span class="bold-text">Day 4:</span> Saturday, Oct 15th</label>
+            <div class="flex-break"></div>
+            <div class="content">
+                <div class="content-1">
+                    <div class="event">
+                        <div class="event-time">07:00 - 08:00</div>
+                        <div class="event-name">Breakfast</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">John Doe</div>
+                                <div class="author-title">CEO & Co Founder of Smooth</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">08:00 - 09:00</div>
+                        <div class="event-name">Morning Yoga</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Jane Smith</div>
+                                <div class="author-title">Certified Yoga Instructor</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">09:00 - 10:00</div>
+                        <div class="event-name">Keynote speech</div>
+                        <div class="sponsor-card">
+                            <span class="sponsor-title">Sponsors:</span>
+                            <div class="sponsors">
+                                <div class="sponsor"><img src="images/partner3.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner5.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner4.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner7.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">10:00 - 11:00</div>
+                        <div class="event-name">Networking Session</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Brown</div>
+                                <div class="author-title">Networking Expert</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">11:00 - 12:00</div>
+                        <div class="event-name">Workshop: Digital Marketing</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Emily White</div>
+                                <div class="author-title">Marketing Director at AdCo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">12:00 - 13:00</div>
+                        <div class="event-name">Lunch Break</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Catering Team</div>
+                                <div class="author-title">Top Chefs of the Event</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-2">
+                    <div class="event">
+                        <div class="event-time">08:00 - 09:00</div>
+                        <div class="event-name">Welcome Drinks</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Alice Green</div>
+                                <div class="author-title">Event Coordinator</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">09:00 - 10:00</div>
+                        <div class="event-name">Startup Pitch Session</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">David Lee</div>
+                                <div class="author-title">Venture Capitalist</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">10:00 - 11:00</div>
+                        <div class="event-name">Panel Discussion: AI in Business</div>
+                        <div class="sponsor-card">
+                            <span class="sponsor-title">Sponsors:</span>
+                            <div class="sponsors">
+                                <div class="sponsor"><img src="images/partner8.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner9.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner7.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">11:00 - 12:00</div>
+                        <div class="event-name">Product Demo</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Olivia Brown</div>
+                                <div class="author-title">Product Manager at TechCorp</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">12:00 - 13:00</div>
+                        <div class="event-name">Networking Lunch</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Paul Johnson</div>
+                                <div class="author-title">Chef & Culinary Expert</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-3">
+                    <div class="event">
+                        <div class="event-time">07:00 - 08:00</div>
+                        <div class="event-name">Morning Run</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Chris Miller</div>
+                                <div class="author-title">Fitness Trainer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">08:00 - 09:00</div>
+                        <div class="event-name">Opening Ceremony</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah Lee</div>
+                                <div class="author-title">Event Director</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">09:00 - 10:00</div>
+                        <div class="event-name">Technology Trends</div>
+                        <div class="sponsor-card">
+                            <span class="sponsor-title">Sponsors:</span>
+                            <div class="sponsors">
+                                <div class="sponsor"><img src="images/partner4.svg" alt=""></div>
+                                <div class="sponsor"><img src="images/partner6.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">10:00 - 11:00</div>
+                        <div class="event-name">Case Study: Market Analysis</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Jessica Taylor</div>
+                                <div class="author-title">Market Research Analyst</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">11:00 - 12:00</div>
+                        <div class="event-name">Creative Workshop</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Mark Wilson</div>
+                                <div class="author-title">Creative Director</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">12:00 - 13:00</div>
+                        <div class="event-name">Power Lunch</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Maria Perez</div>
+                                <div class="author-title">Executive Chef</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-4">
+                    <div class="event">
+                        <div class="event-time">07:00 - 08:00</div>
+                        <div class="event-name">Sunrise Meditation</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author1.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Lisa Brown</div>
+                                <div class="author-title">Mindfulness Coach</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-time">08:00 - 09:00</div>
+                        <div class="event-name">Leadership Training</div>
+                        <div class="author">
+                            <div class="author-image"><img src="images/author2.png" alt=""></div>
+                            <div class="author-info">
+                                <div class="author-name">Tom Harris</div>
+                                <div class="author-title">Leadership Coach</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <a href="#"><img src="images/smooth-logo.png" alt="Smooth Logo"><span class="logo-title"> Smooth</span></a>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="column-title">Company</div>
+                <ul class="column-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="/classes.html">Classes</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="column-title">Products</div>
+                <ul class="column-links">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Mobile App Development</a></li>
+                    <li><a href="#">Web Development</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="column-title">Resources</div>
+                <ul class="column-links">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="column-title">Legal</div>
+                <ul class="column-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook text-neutral-200"></i></a>
+                <a href="#"><i class="fab fa-twitter text-neutral-200"></i></a>
+                <a href="#"><i class="fab fa-instagram text-neutral-200"></i></a>
+                <a href="#"><i class="fab fa-linkedin text-neutral-200"></i></a>
+            </div>
+            <div class="copyright">
+                <span>&copy; 2024 Smooth. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

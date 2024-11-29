@@ -1,0 +1,25 @@
+.author {
+    @include flexbox(flex-start, center, row, null);
+    gap: $content-gap;
+    cursor: pointer;
+
+    .author-image {
+        img {
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .author-info {
+        .author-name {
+            @include typography( content, regular, 600, var(--accent-400) );
+            white-space: nowrap;
+        }
+
+        .author-title {
+            @include typography( content, small, 400, var(--neutral-900) );
+            white-space: nowrap;
+        }
+    }
+}

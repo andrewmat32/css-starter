@@ -1,0 +1,36 @@
+.columns {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+    padding-top: $content-gap;
+
+    @media screen and (max-width: map-get($media-queries, tablet-min)) {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    @media ( map-get($media-queries, tablet-min)) and ( map-get($media-queries, desktop-min)) {
+        padding: 0;
+    }
+
+    .column {
+        @include flexbox(null, null, column, wrap);
+        gap: $content-gap;
+
+        .column-title {
+            @include typography( headings, h3, 500, var(--neutral-100) );
+        }
+
+        .column-links {
+            @include flexbox(null, null, column, null);
+            gap: $content-gap;
+
+            a {
+                @include typography( content, small, 400, var(--neutral-300) );
+                text-decoration: none;
+            }
+        }
+    }
+}

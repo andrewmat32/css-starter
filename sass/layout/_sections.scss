@@ -1,0 +1,39 @@
+section {
+    position: relative;
+
+    @media screen and (max-width: map-get($media-queries, desktop-min)) {
+        height:max-content;
+        padding: $section-padding 0;
+    }
+}
+
+section.quarter-section {
+    height: fit-content;
+}
+
+section.full-section {
+    height: 100vh;
+
+    @media screen and (max-width: map-get($media-queries, desktop-min)) {
+        height: max-content;
+    }
+}
+
+section.dynamic-section {
+    height: auto;
+    padding: $dynamic-section-padding 0;
+}
+
+section:nth-child(2n) {
+    &:after {
+        content: '';
+        display: block;
+        background-color: var(--primary-200);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,38 @@
+.button-to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--accent-500);
+    color: var(--neutral-100);
+    padding: 1rem;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: var(--accent-400);
+    }
+
+    animation: bounce 5s ease infinite;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+.go-back {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: var(--accent-400);
+    }
+
+    animation: bounce 5s ease infinite;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}

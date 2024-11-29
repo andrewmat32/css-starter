@@ -1,0 +1,110 @@
+.forms {
+    .forms-container {
+        @include container();
+
+        .forms-heading {
+            @include flexbox(center, center, column, null);
+            margin-bottom: 2rem;
+            text-align: center;
+
+            .title {
+                @include typography( headings, h2, 500, var(--accent-500) );
+                margin-bottom: 1rem;
+            }
+
+            .sub-title {
+                @include typography( content, medium, 400, var(--neutral-700) );
+                margin-bottom: .5rem;
+            }
+
+            .link {
+                @include typography( content, small, 400, var(--accent-500) );
+                text-decoration: none;
+                color: var(--accent-500);
+                margin-top: 1rem;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .forms-content {
+            input,
+            textarea,
+            select {
+                @include typography( content, medium, 400, var(--neutral-700) );
+                width: 100%;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                border: 1px solid var(--accent-300);
+                border-radius: .5rem;
+                transition: all .2s ease;
+
+                &:focus {
+                    border-color: var(--accent-500);
+                }
+            }
+
+            label {
+                @include typography( content, medium, 400, var(--neutral-700) );
+                margin-bottom: .5rem;
+            }
+
+            select {
+                @include typography( content, medium, 400, var(--neutral-700) );
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            .checkbox-group,
+            .radio-group {
+                width: fit-content;
+                white-space: nowrap;
+                gap: $content-gap;
+
+                input {
+                    width: fit-content;
+                }
+            }
+
+            .form-group:has(.checkbox-group),
+            .form-group:has(.radio-group) {
+                background-color: var(--neutral-100);
+                width: 100%;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                border: 1px solid var(--accent-300);
+                border-radius: .5rem;
+                transition: all .2s ease;
+            }
+
+            .form-stack {
+                gap: $content-gap;
+            }
+
+            input[type="file"] {
+                padding: 0.55rem;
+                background-color: var(--neutral-100);
+
+                &::file-selector-button {
+                    @include typography( content, medium, 400, var(--accent-500) );
+                    padding: 0.5rem 1rem;
+                    border: none;
+                    border-radius: .5rem;
+                    transition: all .2s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--accent-500);
+                        color: var(--neutral-100);
+                        border-color: var(--accent-500);
+                    }
+                }
+            }
+        }
+    }
+}

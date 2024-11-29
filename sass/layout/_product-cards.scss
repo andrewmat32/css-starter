@@ -1,0 +1,99 @@
+.products {
+    .product-cards-container {
+        @include container;
+        @include flexbox(null, null, column, null);
+        gap: 2rem;
+
+        .product-card-description {
+            .title {
+                @include typography( headings, h1, 700, var(--accent-400) );
+            }
+
+            .sub-title {
+                @include typography( content, medium, 400, var(--neutral-900) );
+            }
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            @media screen and (max-width: map-get($media-queries, tablet-min)) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .product-card {
+                cursor: pointer;
+                border-radius: 1rem;
+                border: 1px solid var(--neutral-500);
+                background-color: var(--neutral-200);
+
+                .product-card-image {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        opacity: 50%;
+                        border-top-left-radius: .9rem;
+                        border-top-right-radius: .9rem;
+                        object-fit: cover;
+                    }
+                }
+
+                .product-card-content {
+                    padding: 1rem;
+                    border-top: 1px solid var(--neutral-500);
+
+                    .product-card-title {
+                        @include typography( headings, h4, 500, var(--accent-400) );
+                        padding: 1rem 0;
+                    }
+
+                    .product-card-description {
+                        @include typography( content, small, 400, var(--neutral-900) );
+                    }
+                }
+
+                .product-card-price {
+                    @include typography( content, medium, 600, var(--neutral-900) );
+                    padding: $content-gap 0;
+                }
+
+                .product-card-actions {
+                    @include flexbox(null, null, null, null);
+                    gap: $content-gap;
+                }
+            }
+
+            .product-card:nth-child(even) {
+                flex: 1;
+            }
+
+            .product-card:hover {
+                box-shadow: var( --shadow-2xl );
+
+                img {
+                    opacity: 100%;
+                    transition: all 0.1s ease;
+                }
+
+                &:before {
+                    transition: all .3s linear;
+                    margin-left: 300px;
+                }
+            }
+        }
+
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+            padding: 0;
+
+            .product-cards {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+

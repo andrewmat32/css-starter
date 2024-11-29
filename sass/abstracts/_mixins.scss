@@ -1,0 +1,55 @@
+ //-----------------------------------------------------------------------------
+ //This file contains all application-wide Sass mixins.
+ //-----------------------------------------------------------------------------
+
+//@function hex-to-filter($hex) {
+//     // Remove the hash symbol if it's there
+//     @if str-index($hex, '#') == 1 {
+//         $hex: str-slice($hex, 2);
+//     }
+//
+//     // Ensure the hex is a valid 6-character hex code
+//     @if str-length($hex) != 6 {
+//         @error "Invalid hex code: #{$hex}. It should be a 6-character hex code.";
+//     }
+//
+//     // Split the hex into its RGB components
+//     $r: red(#{$hex});
+//     $g: green(#{$hex});
+//     $b: blue(#{$hex});
+//
+//     // Normalize the RGB values to 0-1 range
+//     $r-normalized: $r / 255;
+//     $g-normalized: $g / 255;
+//     $b-normalized: $b / 255;
+//
+//     // Simplified filter calculations
+//     $average: ($r-normalized + $g-normalized + $b-normalized) / 3;
+//     $invert: 100 - $average * 100;
+//     $sepia: (1 - $average) * 100;
+//     $saturate: $average * 200;
+//     $hue-rotate: ($r-normalized - $b-normalized) * 180;
+//     $brightness: $average * 2 * 100;
+//     $contrast: $average * 100 + 100;
+//
+//     // Return the filter string
+//     @return 'invert(#{$invert}%) sepia(#{$sepia}%) saturate(#{$saturate}%) hue-rotate(#{$hue-rotate}deg) brightness(#{$brightness}%) contrast(#{$contrast}%)';
+//}
+
+@mixin bg-image($imageUrl) {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @if $imageUrl != '' {
+        background-image: url($imageUrl);
+    }
+}
+
+@mixin flexbox($justify: center, $align: center, $direction: row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}

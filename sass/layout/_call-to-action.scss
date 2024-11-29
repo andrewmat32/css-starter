@@ -1,0 +1,174 @@
+.call-to-action {
+    @include flexbox(null, null, null, null);
+
+    .call-to-action-container {
+        @include flexbox(space-evenly, center, null, null);
+        gap: 2rem;
+    }
+
+    .call-to-action-container.contain {
+        @include container;
+    }
+
+    .call-to-action-image {
+        @include flexbox(null, null, null, null);
+
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+            display: none;
+        }
+
+        img {
+            height: 70vh;
+        }
+    }
+
+    .call-to-action-content {
+        max-width: 50%;
+
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+            max-width: 100%;
+        }
+
+        .title {
+            @include typography( headings, h1, 700, var(--accent-400) );
+            margin-bottom: $content-gap;
+        }
+
+        .sub-title,
+        .bullet-text {
+            @include typography( content, medium, 400, var(--neutral-900) );
+            margin-bottom: $content-gap;
+        }
+
+        ul {
+            @include flexbox(null, null, column, null);
+            gap: .6rem;
+            padding: 0;
+            //@include typography( content, regular, 500, var(--neutral-900) );
+
+            li {
+                list-style: none;
+                @include flexbox(null, center, null, null);
+            }
+        }
+    }
+
+    .bullets {
+        border-top: 1px solid var(--accent-100);
+        margin-top: 1rem;
+
+        .bullet-pointer {
+            color: var(--accent-400);
+            margin-right: $content-gap;
+        }
+    }
+
+    .action-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $content-gap;
+
+        @media screen and (max-width: map-get($media-queries, tablet-min)) {
+            grid-template-columns: 1fr;
+        }
+
+        .action-card {
+            @include flexbox(center, center, null, null);
+            gap: $content-gap;
+
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: var(--accent-400);
+            color: var(--neutral-100);
+            transition: all 0.1s ease;
+            cursor: pointer;
+
+            span {
+                width: 100%;
+            }
+
+            &:hover {
+                background-color: var(--accent-300);
+            }
+        }
+    }
+
+    .call-to-action-content:has(.action-cards) {
+        max-width: 100%;
+    }
+
+    .actions {
+        @include flexbox(null, null, null, null);
+        margin-top: $content-gap;
+        gap: $content-gap;
+
+        .anchor-link {
+            i {
+                margin-left: .5rem;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.call-to-action {
+    .call-to-action-container {
+        @media screen and (max-width: map-get($media-queries, desktop-min)) {
+            flex-direction: column;
+
+            &-image {
+                display: none;
+            }
+        }
+    }
+}
+
+.call-to-action.flipped {
+    .call-to-action-container {
+        flex-direction: row-reverse;
+    }
+}
+
+.call-to-action.centered {
+    .call-to-action-container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        .call-to-action-image {
+            height: 23vh;
+            overflow: hidden;
+            @include flexbox(null, null, null, null);
+        }
+
+        .call-to-action-image-full {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            @include flexbox(center, null, null, null);
+        }
+
+        .call-to-action-content {
+            max-width: inherit;
+        }
+
+        .bullets {
+            display: none;
+        }
+
+        .actions {
+            justify-content: center;
+        }
+    }
+}

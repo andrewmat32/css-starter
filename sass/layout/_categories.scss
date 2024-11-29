@@ -1,0 +1,116 @@
+.categories {
+    .categories-container {
+        @include container;
+        @include flexbox(null, null, column, null);
+        gap: 2rem;
+
+        .categories-description {
+            .title {
+                @include typography( headings, h1, 700, var(--accent-400) );
+            }
+
+            .sub-title {
+                @include typography( content, medium, 400, var(--neutral-900) );
+            }
+        }
+
+        .categories {
+            @include flexbox(null, null, null, wrap);
+            gap: $content-gap;
+
+            .category {
+                cursor: pointer;
+                background-color: var(--accent-300);
+                color: var(--neutral-300);
+                border-radius: .5rem;
+                padding: 1rem;
+                transition: all .2s ease;
+                flex: 1;
+                border: 1px solid var(--neutral-300);
+
+                span {
+                    @include flexbox(center, center, null, null);
+                    white-space: nowrap;
+                }
+
+                i {
+                    @include flexbox(center, center, null, null);
+                    height: 40px;
+                    width: 40px;
+                }
+
+                &:hover {
+                    background-color: var(--accent-400);
+                    color: var(--secondary-400);
+                    transition: all .2s ease;
+                }
+            }
+        }
+    }
+}
+
+.categories.medalions {
+    .categories-container {
+        .categories {
+            .category {
+                background-color: unset;
+                min-width: 150px;
+                border: none;
+
+                span {
+                    @include typography( content, medium, 500, var(--neutral-100) );
+                    flex-direction: column;
+                    color: var(--accent-500);
+
+                    i {
+                        border: 1px solid var(--neutral-200);
+                        background-color: var(--accent-300);
+                        color: var(--neutral-100);
+                        padding: 1rem;
+                        border-radius: 50%;
+                        transition: all .3s ease;
+                    }
+                }
+
+                &:hover {
+                    i {
+                        background-color: var(--accent-500);
+                        color: var(--neutral-100);
+                        //scale: 1.1;
+                        transition: all .3s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.categories.cards {
+    .categories-container {
+        .categories {
+            .category {
+                color: var(--accent-400);
+                min-width: 170px;
+
+                span {
+                    @include typography( content, medium, 500, var(--neutral-100) );
+                    flex-direction: column;
+
+                    i {
+                        color: var(--neutral-100);
+                        padding: 1rem;
+                        border-radius: 50%;
+                        transition: all .3s ease;
+                    }
+                }
+
+                &:hover {
+                    i {
+                        transition: all .3s ease;
+                        rotate: 0deg;
+                    }
+                }
+            }
+        }
+    }
+}

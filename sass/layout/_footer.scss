@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer {
+    background-color: var( --accent-400 );
+
+    .footer-container {
+        .footer-logo {
+            @include flexbox(center, center, null, null);
+            @include bg-image('images/smooth-logo.png');
+            gap: $content-gap;
+            padding: 1rem 0;
+            background-color: var( --accent-100 );
+
+            img {
+                width: 35px;
+                height: 35px;
+                transition: all .1s linear;
+            }
+
+            a {
+                @include flexbox(center, center, null, null);
+                gap: $content-gap;
+
+                @include typography( headings, h5, 500, var(--accent-500) );
+            }
+        }
+
+        //.footer-logo:hover {
+        //    img {
+        //        scale: 4;
+        //        opacity: 0;
+        //        transition: all .1s linear;
+        //        width: 0;
+        //    }
+        //
+        //    a {
+        //        @include typography( headings, h4, 500, var(--accent-500) );
+        //        text-shadow: 0 0 5px var(--accent-200);
+        //    }
+        //}
+
+        .footer-bottom {
+            @include container;
+            @include flexbox(space-between, null, null, null);
+
+            @media screen and (max-width: map-get($media-queries, tablet-min)) {
+                @include flexbox(center, center, column, null);
+            }
+
+            @media ( map-get($media-queries, desktop-min)) and ( map-get($media-queries, tablet-min)) {
+                padding: 0;
+            }
+        }
+
+        .footer-social,
+        .copyright {
+            @include flexbox(space-between, null, null, null);
+            gap: $content-gap;
+            padding: 1rem 0;
+            width: max-content;
+            @include typography( content, medium, 400, var(--accent-500) );
+
+            a {
+                @include flexbox(center, center, null, null);
+                gap: $content-gap;
+                text-decoration: none;
+            }
+
+            span {
+                @include typography( content, small, 400, var(--neutral-200) );
+            }
+        }
+
+        .copyright {
+            @include flexbox(center, center, null, null);
+        }
+    }
+}
